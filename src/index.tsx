@@ -1,13 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
 import * as serviceWorker from './serviceWorker';
+import { ActivityProvider } from './Services/activityContext';
+import 'antd/dist/antd.css';
+// import LoginPage from './Components/Pages/LoginPage';
+import App from './Components/Pages/App';
+
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <ActivityProvider>
+      <App/>
+  </ActivityProvider>,
   document.getElementById('root')
 );
 
